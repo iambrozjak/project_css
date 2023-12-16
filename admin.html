@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles1.css">
+  <link rel="stylesheet" href="css/media.css">
+  <title>Футбольний клуб "Динамо" Київ</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <nav class="animated">
+          <button class="menu-btn"></button>
+          <ul class="menu-list">
+            <li class="menu-item"><a href="./index1.html" class="menu-list-link">Головна</a></li>
+            <li class="menu-item dropdown">
+              <a href="#" class="menu-list-link">Матчі</a>
+              <ul class="dropdown-items">
+                <li class="menu-item"><a href="#" class="menu-list-link">Попередній матч</a></li>
+                <li class="menu-item"><a href="#" class="menu-list-link">Наступний матч</a></li>
+                <li class="menu-item"><a href="#" class="menu-list-link">Розклад матчів</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="./news.html" class="menu-list-link">Новини</a></li>
+            <li class="menu-item"><a href="./fan.html" class="menu-list-link">Фанатам</a></li>
+            <li class="menu-item"><a href="#" class="menu-list-link">Контакти</a></li>
+            <li class="menu-item"><a href="#" class="menu-list-link">Адмін</a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img src="image/FC_Dynamo_Kyiv_logo.png" alt="Логопит">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="photo-news">
+        <h1>Додати новини</h1>
+        <form class="admin-form" id="adminForm">
+          <input type="File" id="photoInput" accept="image/*">
+          <input type="text" id="titleText" placeholder="Заголовок звернення">
+          <textarea class="news-message" id="newsText" rows="15" cols="95" placeholder="Текст звернення"></textarea>
+          <button type="submit" class="magic-button">Надіслати</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>Офіційний сайт клубу: <a href="https://fcdynamo.com/">https://fcdynamo.com</a></p>
+  </footer>
+  <script src="js/admin.js"></script>
+</body>
+</html>

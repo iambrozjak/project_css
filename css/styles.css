@@ -26,6 +26,9 @@ header{
   justify-content: space-between;
   align-items: center;
 }
+.menu__btn{
+  display :none
+}
 
 h1, h2 {
   text-align: center;
@@ -150,4 +153,7 @@ footer {
 }
 .card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+.menu-btn {
+  display: b;
 }

@@ -1,0 +1,34 @@
+@media (max-width: 860px) {
+.menu-list {
+  display: block;
+  position: absolute;
+  top: 100px;
+  background-color:  #5f5e5e;
+  right: 0;
+  left: 0;
+  text-align: center;
+  transform: translateY(-500px);
+}
+.menu-btn {
+  display: block;
+  width: 35px;
+  height: 24px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-top: 2px solid #fefefe;
+  border-bottom: 2px solid #fefefe;
+  position:relative;
+  margin-top: 20px; /* відступ зверху */
+  margin-left: 40px;
+}
+.menu-btn::before {
+content: '';
+position: absolute;
+width: 35px;
+height: 2px;
+background-color: #fefefe;
+left: 0;
+top: 9px;
+}
+}

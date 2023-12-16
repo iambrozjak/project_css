@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/styles1.css">
-  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/styles2.css">
+  <link rel="stylesheet" href="css/media2.css">
 	<title>Футбольний клуб "Динамо" Київ</title>
 </head>
   <body>
@@ -13,22 +13,27 @@
       <div class="container"></div>
         <div class="header-inner">
           <nav class="animated">
-            <button class="menu-btn"></button>
-              <ul class="menu-list">
-                <li class="menu-item"><a href="./index1.html" class="menu-list-link"></a>Головна</a></li>
-                <li  class="menu-item" class="dropdown">
-                  <a href="#" class="menu-list-link"></a>Матчі</a>
-                    <ul class="dropdown-items">
-                      <li class="menu-item"><a href="#" class="menu-list-link"></a>Попередній матч</a></li>
-                      <li class="menu-item"><a href="#" class="menu-list-link"></a>Наступний матч</a></li>
-                      <li class="menu-item"><a href="#" class="menu-list-link"></a>Розклад матчів</a></li>
-                    </ul>
-                </li>
-                    <li class="menu-item"><a href="./news.html" class="menu-list-link"></a>Новини</a></li>
-                    <li class="menu-item"><a href="./fan.html" class="menu-list-link"></a>Фанатам</a></li>
-                    <li class="menu-item"><a href="#" class="menu-list-link"></a>Контакти</a></li>
-                    <li class="menu-item"><a href="#" class="menu-list-link"></a>Адмін</a></li>
-              </ul>
+            <div class="hamburger-menu">
+              <input id="menu__toggle" type="checkbox" />
+              <label class="menu__btn" for="menu__toggle">
+                <span></span>
+              </label>
+                <ul class="menu-list">
+                  <li class="menu-item"><a href="./index2.html" class="menu-list-link"></a>Головна</a></li>
+                  <li  class="menu-item" class="dropdown">
+                    <a href="#" class="menu-list-link"></a>Матчі</a>
+                      <ul class="dropdown-items">
+                        <li class="menu-item"><a href="#" class="menu-list-link"></a>Попередній матч</a></li>
+                        <li class="menu-item"><a href="#" class="menu-list-link"></a>Наступний матч</a></li>
+                        <li class="menu-item"><a href="#" class="menu-list-link"></a>Розклад матчів</a></li>
+                      </ul>
+                  </li>
+                      <li class="menu-item"><a href="./news.html" class="menu-list-link"></a>Новини</a></li>
+                      <li class="menu-item"><a href="./fan.html" class="menu-list-link"></a>Фанатам</a></li>
+                      <li class="menu-item"><a href="#" class="menu-list-link"></a>Контакти</a></li>
+                      <li class="menu-item"><a href="./admin.html" class="menu-list-link"></a>Адмін</a></li>
+                </ul>
+            </div>
             </nav>
           <div class="logo">
             <img src="image/FC_Dynamo_Kyiv_logo.png" alt="Логопит">
@@ -68,7 +73,5 @@
     <footer>
       <p>Офіційний сайт клубу: <a href="https://fcdynamo.com/">https://fcdynamo.com</a></p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

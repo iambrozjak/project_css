@@ -53,7 +53,7 @@ margin:0 auto;
   padding-bottom: 5px;
   border-bottom: 1px solid transparent;
   position: relative;
-  margin-top: 20px
+
 }
 .menu-item:hover {
   border-bottom: 1px solid #fff;
@@ -128,29 +128,17 @@ margin:0 auto;
   h1, h2 {
     text-align: center;
   }
-.menu-btn {
-  display: none;
-}
-
-.date-name {
-  display: flex;
-  justify-content: space-between;
-
-}
-.fan-Form {
-  margin-top: 30px;
-}
-.message {
-  margin-top: 30px;
-}
-.admin-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 30px
-}
-.admin-form input,
-.admin-form textarea,
-.admin-form button {
-  margin-bottom: 15px;
-}
+  #menu__toggle {
+    opacity: 0;
+  }
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }

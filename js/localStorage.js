@@ -32,3 +32,21 @@ document.getElementById('adminForm').addEventListener('submit', function(event) 
   document.getElementById('titleText').value = '';
 
 })
+
+function isOnline() {
+  return window.navigator.onLine;
+}
+
+  //   if (isOnline()) {
+      //     alert('sendind data to server');
+      //   } else {
+      //     localStorage.setItem('title', newTitle);
+      //     localStorage.setItem('content', newContent);
+      //   }
+
+window.addEventListener('online')
+
+if (isOnline()) {
+  localStorage.setItem ()
+  document.getElementsByClassName("card").appendChild(messageElement);
+}

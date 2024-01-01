@@ -1,57 +1,3 @@
-// function formatDateTime() {
-//   const options = { year: 'numeric', month: 'numeric', day: 'numeric'};
-//   const formattedDate = new Date().toLocaleDateString('uk-UA', options);
-//   return formattedDate;
-// }
-
-// document.getElementById('fanForm').addEventListener('submit', function(event) {
-//   event.preventDefault();
-
-//   const messageText = document.getElementById('fanText').value.trim();
-//   const formattedDate = formatDateTime();
-//   const fanName = "Фанат";
-
-//   if (!messageText) {
-//     alert("Будь-ласка, введіть повідомлення.");
-//     return;
-//   }
-
-//   let messageElement = document.createElement('article');
-//   messageElement.innerHTML = `
-//     <p>${messageText}</p>
-//     <div class="date-name">
-//       <p class="date">${formattedDate}</p>
-//       <p class="name">${fanName}</p>
-//     </div>
-//     <hr class="divider">`;
-
-//     function isOnline() {
-//       return window.navigator.onLine;
-//     }
-
-//     if (isOnline()) {
-//       localStorage.getItem('content', messageElement);
-//       alert('повідомлення опубліковано');
-//     } else {
-//       localStorage.setItem('content', messageElement);
-//     }
-
-//     // parentElement.insertAdjacentHTML('afterbegin',
-//     //   `<article>
-//     //   <p>${messageText}</p>
-//     //   <div class="date-name">
-//     //     <p class="date">${formattedDate}</p>
-//     //     <p class="name">${fanName}</p>
-//     //   </div>
-//     //   <hr class="divider">`)
-//     // document.getElementById('messages').prepend(messageElement);
-//     document.getElementById('messages').prepend(messageElement);
-
-//   document.getElementById('fanText').value = '';
-// });
-
-
-
 function formatDateTime() {
   const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
   const formattedDate = new Date().toLocaleDateString('uk-UA', options);
@@ -61,22 +7,14 @@ function formatDateTime() {
 function isOnline() {
   return window.navigator.onLine;
 }
-  const messageText = document.getElementById('fanText').value.trim();
-  const formattedDate = formatDateTime();
-  const fanName = "Фанат";
+window.addEventListener("online", () => {
+  console.log("я тут");
 
-document.addEventListener('DOMContentLoaded', function () {
-  const messagesContainer = document.getElementById('messages');
-  let messages = [];
-
-  if (isOnline()) {
-    messages = JSON.parse(localStorage.getItem('messages')) || [];
-  } else {
-    messages = JSON.parse(localStorage.setItem('messages')) || [];
-  }
-
+  let messages = JSON.parse(localStorage.getItem("messages")) || [];
   messages.forEach((message) => {
-    const { messageText, formattedDate, fanName } = message;
+    const messageText = message.text;
+    const formattedDate = message.date;
+    const fanName = message.name;
 
     let messageElement = document.createElement('article');
     messageElement.innerHTML = `
@@ -87,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
       <hr class="divider">`;
 
-    messagesContainer.prepend(messageElement);
+    document.getElementById('messages').prepend(messageElement);
   });
+
+  // Очищення локального сховища після виведення повідомлень
+  localStorage.removeItem("messages");
 });

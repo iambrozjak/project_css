@@ -3,7 +3,9 @@ function formatDateTime() {
   const formattedDate = new Date().toLocaleDateString('uk-UA', options);
   return formattedDate;
 }
-
+function isOnline() {
+  return window.navigator.onLine;
+}
 document.getElementById('fanForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -25,8 +27,26 @@ document.getElementById('fanForm').addEventListener('submit', function(event) {
     </div>
     <hr class="divider">`;
 
-  document.getElementById('messages').prepend(messageElement);
+  // document.getElementById('messages').prepend(messageElement);
+  // alert("Ваше повідомлення опубліковане.");
 
   document.getElementById('fanText').value = '';
-  showMessage("Ваше повідомлення опубліковане.");
-});
+
+  if (isOnline()){
+    document.getElementById('messages').prepend(messageElement);
+    alert("Ваше повідомлення опубліковане.");
+  } else {
+    // save message to local storage
+    const message = {
+      text: messageText,
+      date: formattedDate,
+      name: fanName
+    };
+
+    let messages = JSON.parse(localStorage.getItem('messages')) || [];
+    messages.push(message);
+    localStorage.setItem('messages', JSON.stringify(messages));
+
+    alert("Ваше повідомлення збережена в локальному сховищі.");
+  }
+  });
